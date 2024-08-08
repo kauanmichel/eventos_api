@@ -2,10 +2,7 @@ package com.hellow.eventos.classes.evento;
 
 import com.hellow.eventos.classes.endereco.Endereco;
 import com.hellow.eventos.classes.tipo.Tipo;
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,10 +17,10 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class evento {
-
+@Id
     private Integer id;
     private String nome;
-    private Date data;
+    private Date date;
     private String descricao;
     private Integer lotacao;
     @ManyToOne

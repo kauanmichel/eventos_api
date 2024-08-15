@@ -1,7 +1,7 @@
 package com.hellow.eventos.controller;
 
 import com.hellow.eventos.classes.evento.EventoRepository;
-import com.hellow.eventos.classes.evento.evento;
+import com.hellow.eventos.classes.evento.Evento;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -16,12 +16,12 @@ public class EventoController {
     private EventoRepository eventoRepository;
 
     @GetMapping("todos")
-    public List<evento> getAllEvento() {
+    public List<Evento> getAllEvento() {
         return this.eventoRepository.findAll();
     }
 
     @PostMapping("add")
-    public evento addEvento(@RequestBody evento evento) {
+    public Evento addEvento(@RequestBody Evento evento) {
         this.eventoRepository.save(evento);
         return evento;
 

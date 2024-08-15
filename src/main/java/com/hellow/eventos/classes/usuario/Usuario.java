@@ -2,9 +2,19 @@ package com.hellow.eventos.classes.usuario;
 
 import com.hellow.eventos.classes.tipo.Tipo;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.Date;
 
+@Entity(name="usuario")
+@Table(name="usuario")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Usuario {
 
 

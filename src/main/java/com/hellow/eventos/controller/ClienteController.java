@@ -15,7 +15,7 @@ public class ClienteController {
     private ClienteRepository clienteRepository;
 
     @GetMapping("todos")
-    public List<Cliente> getAllCliente(){
+    public List<Cliente> getAllCliente() {
         return this.clienteRepository.findAll();
     }
 
@@ -24,4 +24,5 @@ public class ClienteController {
         this.clienteRepository.save(cliente);
         return cliente;
 
+    }
 }

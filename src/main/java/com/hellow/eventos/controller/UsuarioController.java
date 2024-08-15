@@ -16,12 +16,12 @@ public class UsuarioController {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
-    @GetMapping("todos")
+    @GetMapping("/todos")
     public List<Usuario> getAllUsuario(){
         return this.usuarioRepository.findAll();
     }
 
-    @PostMapping("add")
+    @PostMapping("/add")
     public Usuario addUsuario(@RequestBody Usuario usuario) {
         this.usuarioRepository.save(usuario);
         return usuario;

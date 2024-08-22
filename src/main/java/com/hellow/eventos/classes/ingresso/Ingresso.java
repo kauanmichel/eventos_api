@@ -7,6 +7,11 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping(path="ingresso")
 
 @Entity(name="ingresso")
 @Table(name="ingresso")
@@ -36,11 +41,11 @@ public class Ingresso {
 
 
     @ManyToOne
-    @JoinColumn(name="id_tipo")
+    @JoinColumn(name="tipo_id")
     private Tipo tipo;
 
     @ManyToOne
-    @JoinColumn(name="id_evento")
+    @JoinColumn(name="evento_id")
     private Evento evento;
 
 

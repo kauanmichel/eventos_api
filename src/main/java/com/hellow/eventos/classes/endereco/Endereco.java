@@ -39,7 +39,7 @@ public class Endereco {
     private String complemento;
 
     @ManyToOne
-    @JoinColumn(name="id_tipo")
+    @JoinColumn(name="tipo_id")
     private Tipo tipo;
 
 }

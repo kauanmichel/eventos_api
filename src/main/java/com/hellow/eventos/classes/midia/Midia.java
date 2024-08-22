@@ -31,11 +31,11 @@ public class Midia {
     private String link;
 
     @ManyToOne
-    @JoinColumn(name="id_tipo")
+    @JoinColumn(name="tipo_id")
     private Tipo tipo;
 
     @ManyToOne
-    @JoinColumn(name="id_evento")
+    @JoinColumn(name="evento_id")
     private Evento evento;
 
 

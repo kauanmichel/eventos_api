@@ -30,19 +30,4 @@ public class Cliente {
 
     private String email;
 
-    private String endereco;
-
-    private String cidade;
-
-    private String estado;
-
-    private String pais;
-
-    private String complemento;
-
-    @ManyToOne
-    @JoinColumn(name="id_cliente")
-    private Cliente cliente;
-
-
 }
